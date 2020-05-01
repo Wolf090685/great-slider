@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Great slider</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h1>Great slider</h1>
+    <section class="slider">
+        <h1>Great slider</h1>
 
-    <div class="flex-wrapper">
         <div class="slider-wrapper">
             <div class="slide active"><img src="images/1.jpg" alt="img1"></div>
             <div class="slide"><img src="images/2.jpg" alt="img2"></div>
             <div class="slide"><img src="images/3.jpg" alt="img3"></div>
+
+            <div id="btn-prev"></div>
+            <div id="btn-next"></div>
         </div>
         <!-- /.slider__wrapper -->
-        <div id="btn-prev"></div>
-        <div id="btn-next"></div>
-    </div>
-    <!-- /.flex-wrapper -->
 
-    <div class="dots-wrapper">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-    </div>
-    <!-- /dots-wrapper -->
-    
-<script src="main.js"></script>
+        <div class="dots-wrapper">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <!-- /dots-wrapper -->
+    </section>
+    <!-- /.slider -->
+
+    <script src="main.js"></script>
 
 </body>
+
 </html>

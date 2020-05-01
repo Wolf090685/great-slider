@@ -24,16 +24,8 @@ h1 {
     margin-bottom: 50px;
 }
 
-.flex-wrapper {
-    display: flex;
-    justify-content: center; 
-    width: 100%;
-}
-
 .slider-wrapper {
-    max-width: 800px;
     width: 100%;
-    height: 490px;
     position: relative;
     box-shadow: 10px 10px 44px -10px rgba(0, 0, 0, 0.75);
 }
@@ -42,49 +34,71 @@ h1 {
 #btn-next {
     position: absolute;
     width: 50px;
-    height: 490px;
+    height: 100%;
+    top: 0;
     background-color: gray;
-    opacity: 0.3;
+    opacity: 0.2;
     cursor: pointer;
+    z-index: 10;
     transition: opacity .3s ease-in-out;
 }
 
 #btn-prev:hover,
 #btn-next:hover {
-    opacity: 0.8;
+    opacity: 0.5;
 }
 
 #btn-next {
-    left: auto;
-    right: 367px;
+    right: 10%;
 }
 
 #btn-prev {
-    right: auto;
-    left: 367px;
+    left: 10%;
 }
 
 .slide {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    margin: 0 auto;
     display: none;
+    position: relative;
 }
 
 .slide.active {
     display: block;
 }
 
+.slide:after,
+.slide:before {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    top: 50%;
+    z-index: 5;
+    transform: translateY(-50%);
+}
+
+.slide:after {
+    background: url(images/prev.svg) center no-repeat;
+    left: 0.5%;
+}
+
+.slide:before {
+    background: url(images/next.svg) center no-repeat;
+    right: 0.5%;
+}
+
 img {
     display: block;
-    max-width: 800px;
     width: 100%;
-    height: 100%;
 }
 
 .dots-wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 25px;
+    width: 90%;
+    margin: 25px auto;
 }
 
 .dot {
